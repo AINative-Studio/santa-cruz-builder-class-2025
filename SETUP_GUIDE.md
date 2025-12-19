@@ -26,133 +26,107 @@ To make sure you get the most out of our hands-on session, please complete these
 
 ---
 
-## Step 1: Install a Code Editor (IDE) - 10 minutes
+## Step 1: Install AINative Studio IDE - 5 minutes
 
-A code editor (also called an IDE) is where you'll write and run your code. Choose ONE of these options:
+AINative Studio IDE is our custom code editor with AI assistance built-in. It's free and works on Mac, Windows, and Linux!
 
-### Option A: VS Code (Recommended for Beginners)
+### Download AINative Studio IDE (Recommended)
 
-**What it is:** A free, beginner-friendly code editor made by Microsoft.
+**Go to:** **https://github.com/AINative-Studio/AINativeStudio-IDE/releases**
 
-**How to install:**
+**Download the right version for your computer:**
 
-1. Go to: **https://code.visualstudio.com**
-2. Click the big **"Download"** button
-   - It will automatically detect if you're on Mac, Windows, or Linux
-3. Once downloaded, open the installer file:
-   - **Mac:** Open the `.dmg` file, drag VS Code to your Applications folder
-   - **Windows:** Run the `.exe` file, click "Next" through the installer
-4. Open VS Code to make sure it works
-5. You should see a welcome screen - you're done!
+#### For Mac:
+- **Apple Silicon (M1/M2/M3):** Download `AINativeStudio-v1.1.0-macOS-arm64.dmg`
+- **Intel Mac:** Download `AINativeStudio-v1.1.0-macOS-x64.dmg`
+- **Not sure which?** Click the Apple logo in the top left → "About This Mac" → Look for "Chip" (M1/M2/M3 = Apple Silicon)
 
-### Option B: Cursor (AI-First Editor)
+**To install on Mac:**
+1. Open the downloaded `.dmg` file
+2. Drag AINative Studio to your Applications folder
+3. Open from Applications (right-click → Open the first time)
 
-**What it is:** A code editor built specifically for AI-assisted coding (based on VS Code).
+#### For Windows:
+- **Most computers:** Download `AINativeStudio-v1.1.0-Windows-x64-UserInstaller.exe`
+- **ARM Windows:** Download `AINativeStudio-v1.1.0-Windows-arm64-UserInstaller.exe`
 
-**How to install:**
+**To install on Windows:**
+1. Run the downloaded `.exe` file
+2. Click "Next" through the installer
+3. Open AINative Studio from the Start menu
 
-1. Go to: **https://cursor.sh**
-2. Click **"Download"**
-3. Install just like VS Code above
-4. Open Cursor to make sure it works
+#### For Linux:
+- **Ubuntu/Debian:** Download `AINativeStudio-v1.1.0-Linux-x64.deb`
+- **Fedora/RHEL:** Download `AINativeStudio-v1.1.0-Linux-x64.rpm`
+- **Other:** Download `AINativeStudio-v1.1.0-Linux-x64.AppImage`
 
-### Option C: Windsurf by Codeium
+**To install on Linux:**
+```bash
+# Debian/Ubuntu
+sudo dpkg -i AINativeStudio-v1.1.0-Linux-x64.deb
 
-**What it is:** Another AI-powered code editor option.
+# Fedora/RHEL
+sudo rpm -i AINativeStudio-v1.1.0-Linux-x64.rpm
 
-**How to install:**
-
-1. Go to: **https://codeium.com/windsurf**
-2. Click **"Download"**
-3. Follow the installation steps
-4. Open to verify it works
-
-**Checkpoint:** Can you open your code editor and see a window where you could type? If yes, move to Step 2!
+# AppImage (any distro)
+chmod +x AINativeStudio-v1.1.0-Linux-x64.AppImage
+./AINativeStudio-v1.1.0-Linux-x64.AppImage
+```
 
 ---
 
-## Step 2: Install an AI Coding Assistant - 10 minutes
+### Alternative IDEs (if you prefer)
 
-Now let's add an AI assistant to your code editor. This is what will help you write code during the class! Choose ONE option:
+If you already have a code editor you're comfortable with, that works too:
 
-### Option A: Claude Code (Recommended)
+- **VS Code:** https://code.visualstudio.com
+- **Cursor:** https://cursor.sh
+- **Windsurf:** https://codeium.com/windsurf
 
-**What it is:** Anthropic's AI coding assistant that runs in your terminal.
+**Checkpoint:** Can you open AINative Studio IDE (or your preferred editor) and see a window where you could type? If yes, move to Step 2!
 
-**How to install:**
+---
 
-1. Open your code editor (VS Code or Cursor)
+## Step 2: AI Assistant Setup - 2 minutes
 
-2. Open the Terminal inside your editor:
-   - **Mac:** Press `Cmd + `` ` (the key below Escape)
-   - **Windows:** Press `Ctrl + `` `
-   - Or go to menu: **View → Terminal**
+**Good news!** If you installed AINative Studio IDE, AI assistance is already built-in! You just need to configure it.
 
-3. You should see a command line at the bottom of your screen
+### If Using AINative Studio IDE (Recommended)
 
-4. Type this command and press Enter:
-   ```
-   npm install -g @anthropic-ai/claude-code
-   ```
+The AI assistant is already included! Here's how to activate it:
 
-   **Don't have npm?** If you see an error, you need Node.js first:
-   - Go to: **https://nodejs.org**
-   - Download the **LTS** version (the green button)
-   - Install it, then try the command above again
+1. Open AINative Studio IDE
+2. Look for the **AI Assistant** panel (usually on the right side or bottom)
+3. If prompted, sign in with your AINative account (same one you'll create in Step 3)
+4. You're ready to go!
 
-5. Once installed, type this to verify:
-   ```
-   claude --version
-   ```
-   You should see a version number!
+**To use the AI assistant:**
+- Click in the AI panel and type your question
+- Or press `Cmd+Shift+A` (Mac) / `Ctrl+Shift+A` (Windows) to open AI chat
+- Ask it to help you write code!
 
-6. To use Claude Code, you'll need an API key from Anthropic:
-   - Go to: **https://console.anthropic.com**
-   - Create an account
-   - Go to API Keys and create one
-   - When you run `claude` for the first time, it will ask for this key
+---
 
-### Option B: GitHub Copilot (in VS Code)
+### If Using a Different IDE
 
-**What it is:** Microsoft/GitHub's AI coding assistant.
+If you chose VS Code, Cursor, or another editor, you'll need to add an AI assistant:
 
-**How to install:**
+#### Option A: Claude Code (Terminal-based)
+```bash
+# Install Node.js first from nodejs.org, then run:
+npm install -g @anthropic-ai/claude-code
+```
+- Get API key from: https://console.anthropic.com
 
-1. Open VS Code
-2. Click the **Extensions** icon on the left sidebar (looks like 4 squares)
-3. Search for **"GitHub Copilot"**
-4. Click **"Install"** on the GitHub Copilot extension
-5. You'll need to sign in with a GitHub account
-6. There's a free trial available, or it's free for students!
+#### Option B: GitHub Copilot (VS Code Extension)
+1. Open VS Code → Extensions → Search "GitHub Copilot" → Install
+2. Sign in with GitHub account (free trial available)
 
-### Option C: Codeium (Free, in VS Code)
+#### Option C: Codeium (Free VS Code Extension)
+1. Open VS Code → Extensions → Search "Codeium" → Install
+2. Create free account when prompted
 
-**What it is:** A free AI coding assistant.
-
-**How to install:**
-
-1. Open VS Code
-2. Click the **Extensions** icon on the left sidebar
-3. Search for **"Codeium"**
-4. Click **"Install"**
-5. Create a free account when prompted
-6. You're ready to go!
-
-### Option D: Gemini CLI (Google's AI)
-
-**What it is:** Google's AI assistant for coding.
-
-**How to install:**
-
-1. Open your terminal (inside VS Code or separately)
-2. Run:
-   ```
-   npm install -g @google/generative-ai
-   ```
-3. You'll need a Google Cloud account and API key
-4. Follow setup at: **https://ai.google.dev**
-
-**Checkpoint:** Can you access your AI assistant in your code editor? Try asking it a simple question like "How do I create a new file?" If it responds, you're ready!
+**Checkpoint:** Can you access your AI assistant? Try asking "How do I create a new file?" If it responds, you're ready!
 
 ---
 
@@ -209,10 +183,9 @@ Project ID: ________________________________
 
 Let's make sure you're all set:
 
-- [ ] I installed a code editor (VS Code, Cursor, or Windsurf)
+- [ ] I installed AINative Studio IDE (or another code editor)
 - [ ] I can open my code editor and see where to type code
-- [ ] I installed an AI coding assistant (Claude Code, Copilot, or Codeium)
-- [ ] I can ask my AI assistant questions and get responses
+- [ ] I can access the AI assistant (built into AINative Studio IDE)
 - [ ] I created an account at ainative.studio
 - [ ] I created an API key in Developer Settings
 - [ ] I created a project and noted my Project ID
@@ -311,29 +284,31 @@ P.S. - D20 has amazing coffee and their avocado toast on sourdough is legendary.
 
 # Troubleshooting Guide (For Non-Technical Attendees)
 
-## "I can't install VS Code"
+## "I can't install AINative Studio IDE"
 
 **Problem:** The download or installation isn't working.
 
 **Solutions:**
-- Make sure you're downloading the right version for your computer (Mac/Windows/Linux)
+- Make sure you're downloading the right version for your computer:
+  - **Mac M1/M2/M3:** Download the `arm64` version
+  - **Mac Intel:** Download the `x64` version
+  - **Windows:** Download the `x64-UserInstaller.exe`
 - On Mac: You might need to right-click and select "Open" the first time
 - On Windows: If blocked, click "More info" then "Run anyway"
-- Try using Cursor instead: cursor.sh
+- Try an alternative: VS Code (code.visualstudio.com) or Cursor (cursor.sh)
 
 ---
 
-## "npm command not found"
+## "Which Mac version do I have?"
 
-**Problem:** When you try to install Claude Code, it says npm isn't recognized.
+**Problem:** You're not sure if you have Apple Silicon or Intel.
 
 **Solution:**
-1. You need to install Node.js first
-2. Go to: https://nodejs.org
-3. Download the **LTS** version (left button, usually green)
-4. Install it (just click Next through everything)
-5. **Close and reopen** your terminal/VS Code
-6. Try the npm command again
+1. Click the **Apple logo** in the top-left corner of your screen
+2. Click **"About This Mac"**
+3. Look for **"Chip"** or **"Processor"**:
+   - If it says **M1, M2, M3, or M4** → Download the `arm64` version
+   - If it says **Intel** → Download the `x64` version
 
 ---
 
@@ -341,8 +316,8 @@ P.S. - D20 has amazing coffee and their avocado toast on sourdough is legendary.
 
 **Problem:** You're not sure where to type commands.
 
-**Solution:**
-1. Open VS Code (or your code editor)
+**Solution in AINative Studio IDE:**
+1. Open AINative Studio IDE
 2. Look at the top menu bar
 3. Click **View** → **Terminal**
 4. A panel should appear at the bottom
@@ -439,11 +414,10 @@ Just come with curiosity and we'll take care of the rest.
 
 | Software | Purpose | Download Link |
 |----------|---------|---------------|
-| VS Code | Code editor | code.visualstudio.com |
-| Cursor | AI code editor | cursor.sh |
-| Node.js | Runs JavaScript | nodejs.org |
-| Claude Code | AI assistant | `npm install -g @anthropic-ai/claude-code` |
-| GitHub Copilot | AI assistant | VS Code Extensions |
-| Codeium | AI assistant (free) | VS Code Extensions |
+| **AINative Studio IDE** | Code editor + AI (Recommended!) | github.com/AINative-Studio/AINativeStudio-IDE/releases |
+| VS Code | Alternative code editor | code.visualstudio.com |
+| Cursor | Alternative AI editor | cursor.sh |
 
-**Minimum setup:** VS Code + Node.js + one AI assistant + AINative account with API key
+**Minimum setup:** AINative Studio IDE + AINative account with API key
+
+**That's it!** AINative Studio IDE has everything built-in.
