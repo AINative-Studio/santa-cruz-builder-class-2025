@@ -11,7 +11,8 @@
 
 | Document | Description |
 |----------|-------------|
-| [STARTER_PROMPT.md](./STARTER_PROMPT.md) | **Copy this into your AI assistant to start building!** |
+| [D20_PIZZA_BUILD.md](./D20_PIZZA_BUILD.md) | **TODAY'S BUILD: D20 Pizza Website (follow along!)** |
+| [STARTER_PROMPT.md](./STARTER_PROMPT.md) | Master prompt to build your own app |
 | [SETUP_GUIDE.md](./SETUP_GUIDE.md) | Step-by-step setup instructions |
 | [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) | One-page reference card (print this!) |
 | [LESSON_PLAN.md](./LESSON_PLAN.md) | Full 2-hour lesson plan |
@@ -36,7 +37,20 @@
 
 ---
 
-## What We're Building Today
+## Today's Project: D20 Pizza Website!
+
+We're building a website for **D20 Pizza** - the very place we're sitting in right now! The website includes:
+- AI-powered chat widget that answers questions about menu, hours, and games
+- ZeroDB memory so the chatbot remembers conversations
+- Beautiful D20-themed design (dice and gaming vibes!)
+
+**Follow along**: [D20_PIZZA_BUILD.md](./D20_PIZZA_BUILD.md)
+
+**Or build your own app**: [STARTER_PROMPT.md](./STARTER_PROMPT.md)
+
+---
+
+## What We're Building
 
 A simple AI-powered application using:
 
